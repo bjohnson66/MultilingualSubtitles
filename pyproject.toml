@@ -1,0 +1,27 @@
+[project]
+name = "multilingual_subtitles"
+description = "Generate and translate subtitles from video using local AI models"
+version = "0.0.1"
+authors = [{ name = "bjohnson66" }]
+readme.content-type = "text/markdown"
+readme.file = "README.md"
+license = { text = "Unlicense" }
+requires-python = ">=3.10"
+
+dependencies = [
+    "ffmpeg-python",
+    "openai-whisper>=20250625",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-mock",
+]
+
+[project.scripts]
+subgen = "multilingual_subtitles.cli:main"
+
+[build-system]
+requires = ["setuptools", "wheel", ]
+build-backend = "setuptools.build_meta"
