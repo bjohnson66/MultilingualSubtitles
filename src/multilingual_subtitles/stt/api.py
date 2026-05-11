@@ -16,13 +16,12 @@ Design goals:
 """
 from typing import Protocol, List
 
+from multilingual_subtitles.types import Segment
 
-class Segment:
-    def __init__(self, start: float, end: float, text: str):
-        self.start = start
-        self.end = end
-        self.text = text
-
+class EmptyTranscriptionError(Exception):
+    """
+    Raised when transcription is empty
+    """
 
 class STTClient(Protocol):
     def transcribe(self, audio_path: str) -> List[Segment]:

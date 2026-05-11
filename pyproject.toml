@@ -6,17 +6,30 @@ authors = [{ name = "bjohnson66" }]
 readme.content-type = "text/markdown"
 readme.file = "README.md"
 license = { text = "Unlicense" }
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 
 dependencies = [
     "ffmpeg-python",
-    "openai-whisper>=20250625",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest",
     "pytest-mock",
+    "setuptools"
+]
+
+whisper = [
+    "openai-whisper"
+]
+
+vosk = [
+    "vosk"
+]
+
+all = [
+    "openai-whisper",
+    "vosk"
 ]
 
 [project.scripts]

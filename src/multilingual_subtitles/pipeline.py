@@ -17,8 +17,8 @@ Design goals:
 - Clear data flow between stages
 """
 
-def run_pipeline():
+def run_pipeline(stt_client=None, audio_path=None, llm_client=None):
     """
-    Placeholder pipeline function.
+    Temporary stub so tests can evolve without breaking.
     """
     return "pipeline not implemented yet"
